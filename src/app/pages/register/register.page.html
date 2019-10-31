@@ -1,0 +1,82 @@
+<ion-content padding class="login auth-page">
+  <br>
+  <br>
+  <br>
+    <div class="auth-content">
+    <!-- Logo -->
+    <div padding-horizontal text-center>
+      <div class="logo"></div>
+      <br>
+      <h3 no-margin>
+        <ion-text color="light" class="fw700">
+          <ion-text color="secondary">Register</ion-text>
+        </ion-text>
+      </h3>
+    </div>
+<br>
+    <!-- Register form -->
+    <form [formGroup]="registerForm
+" class="list-form">
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="email" item-start></ion-icon>
+          Email
+        </ion-label>
+        <ion-input color="secondary" type="text" formControlName="email"></ion-input>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="registerForm.get('email').touched && registerForm.get('email').hasError('required')">
+        <ion-text color="warning">
+          This field is required
+        </ion-text>
+      </p>
+
+
+
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="lock" item-start></ion-icon>
+          Password
+        </ion-label>
+        <ion-input color="secondary" type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <p ion-text color="warning" class="text08" *ngIf="registerForm.get('password').touched && registerForm.get('password').hasError('required')">
+        <ion-text color="warning">
+          This field is required
+        </ion-text>
+
+      </p>
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="copy" item-start></ion-icon>
+          Copy Password
+        </ion-label>
+        <ion-input color="secondary" type="password" formControlName="cpassword"></ion-input>
+      </ion-item>
+<!--      <p ion-text class="text08" *ngIf="registerForm.get('password') === registerForm.get('cpassword').hasError('required')">-->
+<!--        <ion-text color="warning">-->
+<!--          This field is required-->
+<!--        </ion-text>-->
+<!--      </p>-->
+    </form>
+
+    <div margin-top>
+      <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="register()" [disabled]="!registerForm.valid"
+        tappable>
+        <ion-icon name="log-in"></ion-icon>
+        Sign Up
+      </ion-button>
+
+
+    </div>
+<br>
+    <!-- Other links -->
+    <div text-center margin-top>
+      <span (click)="goToLogin()" tappable>
+        <ion-text color="light">
+          <strong>I have an account!</strong>
+        </ion-text>
+      </span>
+    </div>
+
+  </div>
+</ion-content>

@@ -1,0 +1,117 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button color="secondary"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <ion-text color="light">
+                <ion-text class="fw700" color="light">Hi {{authsservice.getmail}}</ion-text>
+            </ion-text>
+        </ion-title>
+        <!--    <ion-buttons >-->
+        <ion-button (click)="logout()" color="light" size="small" slot="end">logout
+            <!--        <ion-icon name="arrow-round-back" color="white"></ion-icon>-->
+            <!--        <ion-badge color="dark" slot="end">2</ion-badge>-->
+        </ion-button>
+        <!--    </ion-buttons>-->
+    </ion-toolbar>
+    <!--  <ion-toolbar color="light" >-->
+    <ion-searchbar [(ngModel)]="searchKey" animated></ion-searchbar>
+    <!--    <ion-buttons slot="end">-->
+    <!--      <ion-button size="small" shape="round" color="medium" (click)="searchFilter()">-->
+    <!--        <ion-icon name="options"></ion-icon>-->
+    <!--      </ion-button>-->
+    <!--    </ion-buttons>-->
+    <!--  </ion-toolbar>-->
+    <ion-card-header color="primary" style="height: 50px">
+        <ion-row>
+            <ion-col size="10">
+                <ion-title>
+                    <p style="font-size: 18px; ">Thel Bemma</p>
+                </ion-title>
+            </ion-col>
+            <ion-col size="2">
+
+            </ion-col>
+        </ion-row>
+    </ion-card-header>
+
+</ion-header>
+
+
+<ion-content>
+    <!--  <ion-card no-margin class="no-radius">-->
+    <!--    <ion-item lines="none" color="medium">-->
+    <!--      <ion-label>-->
+    <!--        <h2 no-margin class="fw500 no-margin">-->
+    <!--          <ion-text color="dark">Alert / Toast test</ion-text>-->
+    <!--        </h2>-->
+
+    <!--        <p class="text-11x no-margin">-->
+    <!--          <ion-text  color="primary">{{yourLocation}}</ion-text>-->
+    <!--        </p>-->
+    <!--      </ion-label>-->
+    <!--      <ion-button shape="round" fill="outline" size="small" color="primary" (click)="alertLocation()">-->
+    <!--        Location-->
+    <!--        <ion-icon name="locate"></ion-icon>-->
+    <!--      </ion-button>-->
+    <!--    </ion-item>-->
+    <!--  </ion-card>-->
+
+    <!--  <ion-card >-->
+    <!--&lt;!&ndash;    <ion-img [src]="themeCover"></ion-img>&ndash;&gt;-->
+    <!--&lt;!&ndash;    <ion-button expand="full" color="dark" (click)="presentImage(themeCover)" no-margin>&ndash;&gt;-->
+    <!--&lt;!&ndash;      Modal 1: Modal Image&ndash;&gt;-->
+    <!--&lt;!&ndash;    </ion-button>&ndash;&gt;-->
+    <!--  </ion-card>-->
+    <ion-card>
+        <ion-card-content color="light">
+            <div style=" display: flex;flex-direction: column;height: 100%;">
+
+
+                <ion-text padding-top padding-vertical
+                          style="overflow-y: scroll;max-height: 90%;">{{dummylist}}</ion-text>
+
+                <!--      <ion-infinite-scroll threshold="100px"  (ionInfinite)="loadData($event)">-->
+                <!--        <ion-infinite-scroll-content-->
+                <!--                loadingSpinner="bubbles"-->
+                <!--                loadingText="Loading more data...">-->
+                <!--        </ion-infinite-scroll-content>-->
+                <!--      </ion-infinite-scroll>-->
+            </div>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
+
+<!--  <ion-button margin shape="round" expand="full" color="secondary" (click)="searchFilter()">-->
+<!--    Modal 2: Search Filter-->
+<!--  </ion-button>-->
+<ion-footer>
+    <ion-toolbar color="primary">
+        <!--  <popmenu></popmenu>-->
+        <ion-row>
+            <!--    <ion-col size=""></ion-col>-->
+            <ion-col size="1"></ion-col>
+            <ion-col size="4">
+                <ion-fab-button (click)="gmap()">
+                    <ion-icon name="navigate" size="large"></ion-icon>
+                </ion-fab-button>
+            </ion-col>
+            <ion-col size="4">
+                <ion-fab-button (click)="addvtisement()">
+                    <ion-icon name="appstore" size="large"></ion-icon>
+                </ion-fab-button>
+            </ion-col>
+            <ion-col size="2">
+                <ion-fab-button (click)="toggle()" color="light" margin-bottom="100px">
+                    <ion-icon *ngIf="!visible" name="mic" size="large"></ion-icon>
+                    <ion-icon *ngIf="visible" name="mic-off" size="large"></ion-icon>
+                </ion-fab-button>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+
+
+        </ion-row>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" >
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-searchbar animated  [(ngModel)]="mapSearchKey" ></ion-searchbar>
+    <ion-button size="small" slot="end" color="light" (click)="logout()">logout
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<!--<ion-header>-->
+<!--  <ion-toolbar color="light">-->
+<!--    <ion-title>-->
+<!--      Google Map-->
+<!--    </ion-title>-->
+<!--  </ion-toolbar>-->
+<!--</ion-header>-->
+
+<ion-content padding >
+  <div #map class="map"></div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <!--  <popmenu></popmenu>-->
+    <ion-row>
+      <!--    <ion-col size=""></ion-col>-->
+      <ion-col size="1"></ion-col>
+      <ion-col size="4">
+        <ion-fab-button (click)="gmap()">
+          <ion-icon name="navigate" size="large"></ion-icon>
+        </ion-fab-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-fab-button (click)="addvtisement()">
+          <ion-icon name="appstore" size="large"></ion-icon>
+        </ion-fab-button>
+      </ion-col>
+
+      <ion-col size="1"></ion-col>
+
+
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
+
+

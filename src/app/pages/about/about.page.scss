@@ -1,0 +1,16 @@
+:host {
+  ion-content {
+    --background: linear-gradient(-135deg, var(--ion-color-medium), var(--ion-color-light))
+  }
+
+  .map {
+    height: 100%;
+  }
+
+}
+#storemapper .storemapper-iw-layout .storemapper-iw-content-bg {
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255);
+  top: 1px;
+  left: 1px;
+}

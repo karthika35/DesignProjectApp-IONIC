@@ -1,0 +1,28 @@
+:host {
+    ion-content {
+        --background: var(--ion-color-light);
+    }
+
+    ion-item {
+        border-radius: 0;
+        border-bottom: 1px dotted var(--ion-color-medium);
+    }
+
+    ion-card {
+        &.no-radius {
+            border-radius: 0;
+        }
+    }
+
+    ion-searchbar {
+        font-size: 300px !important;
+        border: 1px solid transparent;
+
+    }
+
+    //ion-header {
+    //    height: 40px; //by default 56px
+    //}
+
+}
+

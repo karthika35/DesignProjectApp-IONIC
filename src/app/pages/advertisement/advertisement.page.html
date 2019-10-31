@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" >
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title> ADS HERE!</ion-title>
+    <ion-button size="small" slot="end" color="light" (click)="logout()">logout
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding >
+  <ion-content class="card-background-page" color="primary">
+
+    <ion-card color="light" *ngFor="let add of addArray" style="margin: 55px">
+        <ion-card-content>
+<!--               <img src="{{add.image}}">-->
+            <ion-button color="success">Discount:{{add.discount}}</ion-button>
+
+        </ion-card-content>
+        <ion-card-header>
+            <ion-row>
+              <ion-col size="9">
+               <ion-title text-justify="center" padding-horizontal="20px" style="font-weight: bold; font-size: 25px"> {{add.shopName}}</ion-title>
+              </ion-col>
+              <ion-col size="3">
+                <ion-fab-button><ion-icon size="large" (click)="goToMap()"name="navigate"></ion-icon></ion-fab-button>
+              </ion-col>
+            </ion-row>
+        </ion-card-header>
+    </ion-card>
+<!--    <ion-card color="light">-->
+<!--      <ion-card-content>-->
+<!--        <img src="assets/img/add2.jpg"/>-->
+<!--      </ion-card-content>-->
+<!--      <ion-card-header>-->
+<!--        <ion-row>-->
+<!--          <ion-col size="9">-->
+<!--            <ion-title text-justify="center" padding-horizontal="40px" style="font-weight: bold; font-size: 25px"> Shop 02</ion-title>-->
+<!--          </ion-col>-->
+<!--          <ion-col size="3">-->
+<!--            <ion-fab-button><ion-icon size="large" (click)="goToMap()"name="navigate"></ion-icon></ion-fab-button>-->
+<!--          </ion-col>-->
+<!--        </ion-row>-->
+<!--      </ion-card-header>-->
+<!--    </ion-card>-->
+<!--    <ion-card color="light">-->
+<!--      <ion-card-content>-->
+<!--        <img src="assets/img/add4.jpg"/>-->
+<!--      </ion-card-content>-->
+<!--      <ion-card-header>-->
+<!--        <ion-row>-->
+<!--          <ion-col size="9">-->
+<!--            <ion-title text-justify="center" padding-horizontal="40px" style="font-weight: bold; font-size: 25px"> Shop 03</ion-title>-->
+<!--          </ion-col>-->
+<!--          <ion-col size="3">-->
+<!--            <ion-fab-button><ion-icon size="large" (click)="goToMap()"name="navigate"></ion-icon></ion-fab-button>-->
+<!--          </ion-col>-->
+<!--        </ion-row>-->
+<!--      </ion-card-header>-->
+<!--    </ion-card>-->
+
+  </ion-content>
+</ion-content>
+
