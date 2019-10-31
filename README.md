@@ -1,5 +1,5 @@
 # DEsignProjectApp
-mobile application for tour guide app
+mobile application helps to find out the nearest tourist attractive places near to you and give information about the places
 
 ## installation
    os- windows 10,
