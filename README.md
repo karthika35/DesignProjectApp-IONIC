@@ -9,6 +9,7 @@ mobile application helps to find out the nearest tourist attractive places near 
    
    ```bash
    git clone https://github.com/karthika35/DEsignProjectApp.git
+   npm i
 ```
 ## run
 for browser 
